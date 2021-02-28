@@ -2,3 +2,27 @@
   display: inline-block;
   width: 50%;
 }
+
+table {
+  width: 100%;
+  border-radius: 5px;
+  background-color: lightblue;
+}
+
+.day {
+  font-weight: bold;
+  font-size: x-large;
+  color: blue;
+}
+
+.date {
+  color: brown;
+}
+
+.min {
+  color: red;
+}
+
+.max {
+  color: green;
+}

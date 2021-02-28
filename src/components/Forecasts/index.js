@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { connect } from 'react-redux';
+import Forecast from './Forecast';
 import Utils from '../../utils/Utils';
 import ItemsCarousel from 'react-items-carousel';
 import './index.css';
@@ -27,7 +28,7 @@ function Forecasts({ forecasts }) {
       >
       {forecasts.map((forecast, i) => {
         return (
-          <label key={i}>{forecast.dt}</label>
+          <Forecast forecast={forecast} key={i} />
         );
       })}
       </ItemsCarousel>

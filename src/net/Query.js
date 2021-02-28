@@ -6,5 +6,8 @@ import server from './server.json';
 export async function execute() {
   const json = await Rest.GET(`${server.http.apiBaseUrl}`);
   const { dispatch } = store;
-  dispatch(Actions.refresh(json.daily));
+  const data = json.daily.map(o => {
+    return { ...o, dt: o.dt * 1000 };
+  });
+  dispatch(Actions.refresh(data));
 }
