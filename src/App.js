@@ -1,5 +1,6 @@
 import React from 'react';
 import Form from './components/Form';
+import Forecasts from './components/Forecasts';
 import './App.css';
 
 function App() {
@@ -7,6 +8,7 @@ function App() {
     <div className="App">
       <div className="logo" />
       <Form />
+      <Forecasts />
     </div>
   );
 }
