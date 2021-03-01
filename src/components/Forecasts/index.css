@@ -3,11 +3,10 @@
   width: 50%;
 }
 
-table {
+.forecast {
   width: 100%;
   border-radius: 5px;
   background-color: lightblue;
-  padding-bottom: 20px;
 }
 
 .day {
@@ -20,12 +19,16 @@ table {
   color: brown;
 }
 
+.min-max {
+  color: darkmagenta;
+}
+
 .min {
   color: red;
 }
 
 .max {
-  color: green;
+  color: darkgreen;
 }
 
 .Clear {
@@ -48,4 +51,8 @@ table {
   display: inline-block;
   width: 128px;
   height: 128px;
+}
+
+table {
+  display: inline-table;
 }

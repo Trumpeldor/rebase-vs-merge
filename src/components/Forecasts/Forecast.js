@@ -4,43 +4,36 @@ import './index.css';
 
 function Forecast({ forecast: { dt, temp, weather }, unitId }) {
   const image = weather['0'].main;
-  console.log(image)
   return (
-    <div>
-      <table>
-        <tbody>
-          <tr>
-            <td>
-              <div className={image} alt={image} title={image}></div>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label className="day">{Utils.getDayStr(dt)}</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label className="date">{Utils.getDateStr(dt)}</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label>Min temp: </label>
-              <label className="min">{temp.min}</label>
-              <label>°C</label>
-            </td>
-          </tr>
-          <tr>
-            <td>
-              <label>Max temp: </label>
-              <label className="max">{temp.max}</label>
-              <label>°C</label>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <table className="forecast">
+      <tbody>
+        <tr>
+          <td className={image} alt={image} title={image} />
+        </tr>
+        <tr>
+          <td className="day">{Utils.getDayStr(dt)}</td>
+        </tr>
+        <tr>
+          <td className="date">{Utils.getDateStr(dt)}</td>
+        </tr>
+        <tr>
+          <td>
+            <table>
+              <tbody>
+                <tr>
+                  <td className="min-max">Minimum:</td>
+                  <td className="min">{temp.min}°C</td>
+                </tr>
+                <tr>
+                  <td className="min-max">Maximum:</td>
+                  <td className="max">{temp.max}°C</td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
   );
 }
 

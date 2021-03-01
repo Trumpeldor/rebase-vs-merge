@@ -1,5 +1,5 @@
 {
   "http": {
-    "apiBaseUrl": "https://api.openweathermap.org/data/2.5/onecall?lat=31.7683&lon=35.2137&exclude=minutely,hourly,alerts&units=metric&appid=68918060d2b75f2fd16c940b75226d36"
+    "apiBaseUrl": "https://api.openweathermap.org/data/2.5"
   }
 }
